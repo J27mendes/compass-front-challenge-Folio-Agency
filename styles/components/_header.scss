@@ -1,0 +1,68 @@
+@import '../abstract/variaveis'; 
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding: 2.5rem 2rem;
+        .header--line {
+            position: absolute;
+            top: 0rem;
+            right: 0rem;
+        } 
+        .header--container {
+            margin-top: 0.8rem;
+            margin-left: -3rem; 
+            
+            }
+        }        
+
+    .header--title {
+        display: flex;
+        flex-direction: column;
+        width: 75%;
+        margin: 0rem 2rem;
+        h1 {
+            font-family: $font-primary;
+            font-weight: bold;
+            line-height: 3.5rem;
+            font-size: 3rem;
+            color: $color-dark;
+        }
+        p {
+            font-family: $font-primary;
+            font-size: 16px; 
+            line-height: 28px;
+            color: $color-gray;
+            padding: 1.5rem 0;
+            font-weight: 400;
+        }
+        a {
+            background: $color-blue;
+            padding: 1.5rem 0rem;
+            border: 1px solid $color-blue;
+            border-radius: 8px 8px;
+            text-align: center;
+            color: $color-white;
+            font-size: 16px;
+            text-decoration: none;
+            width: 60%;
+        }
+        img {
+            position: absolute;
+            top: 0rem;
+            right: 0rem;
+        }
+
+    }
+    
+}
+
+
