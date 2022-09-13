@@ -10,19 +10,61 @@ header {
     .header {
         display: flex;
         justify-content: space-between;
-        align-items: flex-start;
-        padding: 2.5rem 2rem;
+        align-items: center;
+        padding: 3rem 2rem 1.5rem 2rem;
+        position: relative;
         .header--line {
             position: absolute;
             top: 0rem;
             right: 0rem;
+            z-index: -1;
         } 
         .header--container {
             margin-top: 0.8rem;
             margin-left: -3rem; 
-            
+            z-index: 100;
+            position: relative;
+            input {
+                display: none;
             }
-        }        
+            span {
+                z-index: 200;
+            }
+            .header--menu--options {
+                display: none;
+                position: absolute;
+                top: 100%;
+                right: 2rem;
+                background: $color-dark;
+                padding: 3rem;
+                .menu--options {
+                    padding: 3rem 10rem 3rem 1rem; 
+                    color: $color-gray-light; 
+                    font-size: 32px; 
+                    font-weight: 700;
+                    text-align: left; 
+                
+                }
+                .footer--logo-socials {
+                    display: flex;
+                    justify-content: flex-start;
+                    background: $color-dark;
+                    font-size: calc($sizes * 3);
+                    margin-top: 4rem;
+                    img {
+                        border: 1px solid $color-gray-light;
+                        border-radius: 50%;
+                        padding: 1rem;
+                        margin: 0.5rem;
+                    }
+                    
+                }
+            }
+            input:checked ~ .header--menu--options {
+                display: block;
+            }
+        }
+    }        
 
     .header--title {
         display: flex;

@@ -1,5 +1,6 @@
 @import '../abstract/variaveis';
 
+
 .main {
     display: flex;
     flex-direction: column;
@@ -32,17 +33,18 @@
     }
 }
 .main--shape {
+    position: relative;
     :first-child{
         width: 100vw;
     }
     :nth-child(2){
         position: absolute;
-        top: 81.5rem;
+        top: -1.5rem;
         right: 0rem;        
     }
     :last-child {
         position: absolute;
-        top: 83rem;
+        top: 1rem;
         right: 0rem;
         
     }
@@ -95,7 +97,5 @@
             font-weight: 600;
         }
     }
-    
-
-
 }
+

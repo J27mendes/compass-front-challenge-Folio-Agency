@@ -1,0 +1,56 @@
+@import '../abstract/variaveis';
+
+
+.mobile--cta{
+    .mobile--cta--bg  {
+        position: absolute;
+        top: 8rem;
+        left: 2rem;
+        z-index: -2;
+    }
+   .mobile--cta--mask {
+        position: absolute;
+        top: 23rem;
+        right: 0;
+        z-index: -1;
+    }
+    .cta {
+    border-radius: 24px;
+    padding: 2rem 2rem 0rem 2rem;
+    margin: 2rem;
+    color: $color-white;
+    justify-content: flex-start;
+    z-index: 0;
+    :last-child {
+        margin-left: -4rem;
+    }
+        .cta--message {
+            display: flex;
+            margin: 2rem 0;
+            :last-child {
+                margin-left: 2rem;
+            }
+        }
+        h2 {
+            font-size: 48px;
+            font-weight: bold;
+            font-family: $font-primary;
+            padding-bottom: 3rem;
+            z-index: 100;
+            line-height: 54px;
+        }
+        a {
+            text-decoration: none;
+            color: $color-blue;
+            background: $color-white;
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            z-index: 100; 
+            font-weight: 600;
+        }
+        img {
+            margin-top: 2rem;
+            z-index: 0;
+        }
+    }
+}
