@@ -7,6 +7,9 @@
 }
 
 header {
+    .menuteste {
+        background: $color-dark;
+    }
     .header {
         display: flex;
         justify-content: space-between;
@@ -28,13 +31,13 @@ header {
                 display: none;
             }
             span {
-                z-index: 200;
+                z-index: 100;
             }
             .header--menu--options {
                 display: none;
                 position: absolute;
                 top: 100%;
-                right: 2rem;
+                right: -2rem;
                 background: $color-dark;
                 padding: 3rem;
                 .menu--options {
@@ -74,7 +77,7 @@ header {
         h1 {
             font-family: $font-primary;
             font-weight: bold;
-            line-height: 3.5rem;
+            line-height: 3rem;
             font-size: 3rem;
             color: $color-dark;
         }
@@ -93,18 +96,120 @@ header {
             border-radius: 8px 8px;
             text-align: center;
             color: $color-white;
-            font-size: 16px;
+            font-size: 14px;
+            font-weight: 400;
             text-decoration: none;
-            width: 60%;
+            width: 50%;
+            z-index: 200;
         }
-        img {
+        .header--title-img {
             position: absolute;
             top: 0rem;
             right: 0rem;
         }
-
+        .header--title-img2 {
+            display: none;
+        }
     }
-    
 }
+.header--container--tablet {
+    display: none;
+}
+.header--swipe-down {
+    display: none;
+}
+#tablet--work {
+    display: none;
+}
+#tablet--cta {
+    display: none;
+
+}
+
+@media screen and (min-width: 1024px){
+    .header {
+        margin-top: -2rem;
+        .header--line {
+            display: none;
+        }
+        .header--container {
+            display: none;  
+        }
+        .header--container--tablet {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            width: 75%;
+            z-index: 300;
+            padding: 1rem 0;
+            a {
+                color: $color-gray;
+                text-decoration: none;
+                font-size: 16px;
+                font-family: $font-primary;
+                font-weight: 500;
+            }
+            .tablet--menu--extra {
+                display: flex;
+                align-items: center;
+                :last-child{                
+                border: 1px solid $color-blue;
+                color: $color-white;
+                background: $color-blue;
+                font-size: 10px;
+                border-radius: 75%;
+                margin-left: 0.3rem;
+                margin-top: -0.5rem;
+                padding: 0.3rem;
+                }
+            }
+            :last-child {
+                border: solid 1px $color-dark;
+                color: $color-white;
+                background: $color-dark;
+                font-size: 16px;
+                border-radius: 8px;
+                padding: 1rem 1.5rem;
+            }
+            
+            .tablet--menu:hover {
+                color: $color-blue;
+            }
+        }
+    }
+    .header--title {
+        font-weight: bold;  
+        margin-bottom: 2rem;  
+        padding: 3rem 28rem 3rem 2rem; 
+        h1 {
+            font-size: 12rem;
+            line-height: 3rem;
+        }
+        .header--swipe-down {
+            display: flex;
+            justify-items: flex-start;
+            align-items: center;
+            background: $color-white;
+            border: none;
+            :first-child {
+                margin-right: 0.5rem;                
+            }
+        }
+        .header--title-images {
+            position: relative;
+            .header--title-img {
+                display: none;
+            }
+            .header--title-img2 {
+                display: block;
+                width: 1100px;
+                position: absolute;
+                top: -42rem;
+                left: -9rem;
+            }
+        }
+    } 
+}
+
 
 

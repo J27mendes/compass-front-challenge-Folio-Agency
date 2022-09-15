@@ -109,3 +109,252 @@
         justify-content: center;
     }
 }
+
+@media screen and (min-width: 1024px){
+    #tablet--work {
+        display: block;
+        .main--service {
+            display: flex;
+            flex-direction: row;
+            .tablet--work-logo {
+                width: 20%;
+                img {
+                    margin-top: 5rem;
+                    width: 2.5rem;
+                    margin-bottom: 11rem;
+                } 
+            }
+            .tablet--work-message {
+                width: 75%;
+                margin-left: -7rem;
+                justify-content: flex-start;
+                margin-top: 3rem;
+                h2 {
+                    font-size: 4rem;
+                }
+                :last-child {
+                    width: 58%;
+                    font-size: 1.2rem;
+                    margin-bottom: 3rem;
+                }
+            }
+            .tablet--work-contact {
+                width: 20%;
+                margin-top: 10rem;
+                margin-left: -10rem;
+                a {
+                    text-decoration: none;
+                    color: $color-white;
+                    background: $color-blue;
+                    padding: 1rem 2rem;
+                    border-radius: 8px;
+                    font-weight: 400;
+                    font-size: 18px;
+                }
+            }
+        }
+        .work--tablet-card {
+            display: flex;
+            align-items: center;
+            margin-left: 3rem;
+            .tablet--card {
+                z-index: 1;
+                a {
+                    text-decoration: none;
+                    color: $color-white;
+                    background: $color-blue-violet;
+                    padding: 0.7rem 2rem;
+                    border-radius: 24px;
+                    font-weight: 400;
+                    font-size: 16px;
+                    margin-left: 2rem;
+                    
+                }
+                h2 {
+                    margin-top: 3rem;
+                    font-size: 2.3rem;
+                    line-height: 3rem;
+                    width: 60%;
+                    margin-bottom: 2rem;
+                }
+                p {
+                    width: 30%;
+                    line-height: 2rem;
+                }
+            }
+            .work--card--product {
+                img {
+                    background: $color-little-blue;
+                    padding: 0 3rem;
+                    margin-left: -30rem;
+                    width: 550px;
+                    margin-top: 5rem;    
+                    z-index: -1;
+                }
+            }
+            .tablet--stroke {
+                position: relative;
+                a {
+                   img {
+                    position: relative;
+                    bottom: 0rem;
+                    left: -5rem;
+                   }
+                }
+                .tablet--water-mark {
+                    z-index: -10;
+                    position: absolute;
+                    width: 350px;
+                    top: -20rem;
+                    right: 0;
+                }
+            }
+         
+        }
+        .tablet--work-card {
+            display: flex;
+            margin-top: 4.5rem;
+            .tablet--card-division {
+                width: 50%;
+                .tablet--card-container {
+                    .bento-3D {
+                        margin-top: 15rem;
+                        font-size: 2rem;
+                        font-weight: 700;
+                        color: $color-dark;
+                        margin-bottom: 2rem;
+                        margin-left: 6.3rem;
+                    }
+                    .tablet-work-container[card-one] {
+                        margin-left: 3rem;
+                        :first-child[card-one] {
+                            background: $color-little-orange;
+                            border-radius: 24px;
+                            padding: 1rem;
+                            margin-left: 3rem;
+                        }
+                    }
+                    a {
+                        img {
+                            margin-left: -2rem;
+                            margin-bottom: 2.5rem;
+                        }
+                    }
+                    .tablet--card-bento3D {
+                        width: 50%;
+                        color: $color-gray;
+                        line-height: 1.5rem;
+                        font-size: 14px;
+                        font-weight: 400;
+                        margin-left: 6.3rem;
+                        margin-top: 2rem;
+                    }
+                    .sapiens {
+                        margin-top: 13rem;
+                        font-size: 2rem;
+                        font-weight: 700;
+                        color: $color-dark;
+                        margin-bottom: 2rem;
+                        margin-left: 14rem;
+                    }
+                    .tablet-work-container[card-two] {
+                        :first-child[card-two] {
+                            background: $color-dark-pink;
+                            border-radius: 24px;
+                            margin-left: 14rem;
+                            padding: 3.5rem 0.5rem;
+                            width: 45%;
+                        }
+                        
+                    }
+                    .tablet--card-sapiens {
+                        width: 50%;
+                        color: $color-gray;
+                        line-height: 1.5rem;
+                        font-size: 14px;
+                        font-weight: 400;
+                        margin-left: 14rem;
+                        margin-top: 2rem;
+                    }
+                }
+            }
+            .tablet--card-division2 {
+                width: 50%;
+                .bento-vol2 {
+                    font-size: 2rem;
+                    font-weight: 700;
+                    color: $color-dark;
+                    margin-bottom: 2rem;
+                    margin-left: 13rem;                   
+                } 
+                .tablet-work-container[card-three] {
+                    .bento-card-three {
+                        background: $color-violet;
+                        border-radius: 24px;
+                        margin-left: 13rem;
+                        margin-right: 2rem;
+                        width: 225px; 
+                        height: 225px;
+                        z-index: -1; 
+                        position: relative;
+                        img {
+                            position: absolute;
+                            top: -4rem;
+                            right: 4rem;
+                        } 
+                        a {
+                            img {
+                                margin-top: 12rem;
+                                margin-right: -5.5rem;
+                            }
+                        }                 
+                    }
+                }
+                .tablet--card-bento-vol2 {
+                    width: 50%;
+                    color: $color-gray;
+                    line-height: 1.5rem;
+                    font-size: 14px;
+                    font-weight: 400;
+                    margin-left: 13rem;
+                    margin-top: 2rem;
+                } 
+                .bento-vol3 {
+                    font-size: 2rem;
+                    font-weight: 700;
+                    color: $color-dark;
+                    margin-bottom: 2rem;
+                    margin-left: 5rem;  
+                    margin-top: 25rem; 
+
+                }
+                .tablet-work-container[card-four] {
+                    :first-child[card-four] {
+                        background: $color-little-blue;
+                        border-radius: 24px;
+                        margin-left: 5rem;
+                        padding: 1rem;
+                    }
+                    a {
+                        position: relative;
+                        img {
+                            position: absolute;
+                            top: -5rem;
+                            right: -1.5rem;
+                        }
+                    }
+                }
+                .tablet--card-bento-vol3 {
+                    width: 50%;
+                    color: $color-gray;
+                    line-height: 1.5rem;
+                    font-size: 14px;
+                    font-weight: 400;
+                    margin-left: 5rem;
+                    margin-top: 2rem;
+                }
+               
+            }
+        }  
+    }
+}

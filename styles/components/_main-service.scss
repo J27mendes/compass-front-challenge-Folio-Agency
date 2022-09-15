@@ -21,7 +21,6 @@
         }
         h2 {
             font-size: 3rem;
-            width: 80%;
             margin-bottom: 2rem;
             font-weight: bold;
             line-height: 3rem;
@@ -89,7 +88,6 @@
 .service--line {
     position: relative;
     img {
-        background-image: url('../../images/main-service/line\ 1.svg');
         position: absolute;
         top: -28rem;
         right: 0;
@@ -116,7 +114,7 @@
         } 
     }
     h2 {
-        font-size: 2.2rem;
+        font-size: 1.8rem;
         width: 85%;
         margin-bottom: 2rem;
         font-weight: 700;
@@ -155,4 +153,123 @@
         top: 8rem;
         z-index: -1;
     }   
+}
+#page--tablet-main-service {
+    display: none;
+}
+
+@media screen and (min-width: 1024px){ 
+    #page--tablet-main-service {
+        background: linear-gradient(rgba(237, 229, 240, 0.5043) 0%, rgba(255, 255, 255, 0.0001) 100%);
+        display: block;
+        .tablet--service {
+            display: flex;
+            margin-top: 3rem;
+            justify-content: flex-start;
+            align-items: flex-start;
+            .main--year-symbol {
+                width: 20%;
+                img {
+                    margin-top: 2rem;
+                    width: 2.5rem;
+                    margin-left: 3rem;
+                }
+            }
+            .tablet--who-we-do {
+                flex-direction: column;
+                h2 {
+                    font-size: 3rem;
+                }
+            }
+            .main--arrow2 {
+                display: flex;
+                justify-content: space-around;
+                margin-top: 5rem;
+                margin-right: 4rem;
+                z-index: 20;
+                img {
+                    width: 50px;
+                    margin: 0 0.5rem;
+                }
+            }
+        }
+        .main--service--card {
+            display: flex;
+            flex-direction: row;
+            margin-top: 3rem;
+            .service--card {
+                flex-direction: column;
+                justify-content: space-evenly;
+                align-items: center;
+                margin: 0;
+                max-width: 21%;
+                height: 400px;
+                padding: 3rem 0;
+                :first-child[strategy] {
+                    background: #D1ECFD;
+                    padding: 1rem;
+                    border-radius: 50%;
+                    width: 100px;
+                }
+                :first-child[branding] {
+                    background: #908CFF;
+                    padding: 1.5rem 0 0 1.2rem;
+                    border-radius: 50%;
+                    width: 100px;
+                }
+                :first-child[interative] {
+                    background: $color-orange;
+                    padding: 1.5rem 0.2rem 0.8rem 1.1rem;
+                    border-radius: 50%;
+                    width: 100px;
+                }
+                :first-child[communicate] {
+                    background: #FFADD0;
+                    padding: 1.6rem 0.1rem 0.1rem 1.6rem;
+                    border-radius: 50%;
+                    width: 100px;
+                }
+                :last-child {
+                    color: $color-blue;
+                    font-size: 18px;
+                    font-weight: 600;
+                    justify-self: center;
+                    width: 100px;        
+                } 
+                .span-communicate {
+                    justify-self: flex-start;
+                    margin: 0;
+                }
+            }
+        }
+        .service--card:hover {
+            background: $color-blue;
+            border: none;
+            height: 440px;
+            :last-child {
+                color: $color-white;
+            }
+        } 
+        .tablet--achievement {
+            display: flex;
+            flex-direction: row-reverse;
+            margin-top: 5rem;
+            .main--service--achievement {
+                .service--achievement {
+                    margin-top: 3rem;
+                    :first-child {
+                        margin-right: 4rem ;
+                    }                          
+                }
+                h2 {
+                    line-height: 2.5rem;
+                }  
+            }
+            .service--number {
+                :last-child {
+                    width: calc($sizes * 4);
+                }
+            }
+        }
+    }
 }
