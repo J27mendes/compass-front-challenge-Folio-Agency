@@ -2,6 +2,8 @@
 
 
 .mobile--cta{
+    display: flex;
+    flex-direction: column;
     .mobile--cta--bg  {
         position: absolute;
         top: 8rem;
@@ -54,33 +56,77 @@
         }
     }
 }
+#tablet--cta {
+    display: none;
+}
 
 @media screen and (min-width: 1024px){
+    .mobile--cta{
+        display: none;
+    }
     #tablet--cta {
-        /*display: block;*/
+        display: block;
         margin-top: 4rem;
+        margin-bottom: 8rem;
         .tablet--cta {
             display: flex;
-            justify-content: space-around;
             align-items: flex-start;
-            .tablet--cta-logo {
-                width: 10%;
-                .main--year-symbol {
-                    width: 3rem;
-                    margin-left: 5rem;
-                    margin-top: 1rem;
-                }
-                
-            }
-            .tablet--cta-img-phone {
-                img {
-                    width: 600px;
-                }
-            }
             .cta {
-                border: solid 1px red;
+                position: relative;
+                top: 7rem;
+                right: -33rem;
+                color: $color-white;
+                width: 30%;
+                z-index: 300;
+                .cta--message {
+                    display: flex;
+                    font-size: 18px;
+                    margin-bottom: 2rem;
+                    p {
+                        margin-right: 2rem;
+                        font-weight: 400;
+                    }
+                }
+                h2 {
+                    font-size: 3.2rem;
+                    font-weight: 700;
+                    letter-spacing: 2px;
+                    line-height: 4rem;
+                }
+                a {
+                    position: relative;
+                    bottom: -2rem;
+                    left: 0;
+                    text-decoration: none; 
+                    background: $color-white;
+                    color: $color-blue;
+                    text-align: center;
+                    justify-self: center;
+                    padding: 1rem 2rem;
+                    border-radius: 8px;
+                    font-weight: 600;
+                }
+            }
+            .tablet--cta-mask {
+                position: relative;
+                bottom: -4rem;
+                left: 22rem;
+            }
+            .tablet--cta-mask-blue{
+                position: relative;
+                img {
+                    position: absolute;
+                    top: 2rem;
+                    right: -18rem;
+                    z-index: -10;
+                }
+                img[symbol] {
+                    margin-top: 5rem;
+                    margin-right: 45rem;
+                    width: 2.5rem;
+                    z-index: 200;
+                }
             }
         }
-        
     }
 }

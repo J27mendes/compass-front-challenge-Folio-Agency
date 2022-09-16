@@ -9,12 +9,14 @@
 header {
     .menuteste {
         background: $color-dark;
+        width: 100vw;
     }
     .header {
         display: flex;
         justify-content: space-between;
         align-items: center;
         padding: 3rem 2rem 1.5rem 2rem;
+        width: 100vw;
         position: relative;
         .header--line {
             position: absolute;
@@ -40,13 +42,19 @@ header {
                 right: -2rem;
                 background: $color-dark;
                 padding: 3rem;
+                width: 100vw;
+                height: 100vh;
                 .menu--options {
                     padding: 3rem 10rem 3rem 1rem; 
                     color: $color-gray-light; 
                     font-size: 32px; 
                     font-weight: 700;
                     text-align: left; 
-                
+
+                }
+                .menu--options:hover {
+                    color: $color-white;
+                    text-decoration: none;
                 }
                 .footer--logo-socials {
                     display: flex;
@@ -60,55 +68,65 @@ header {
                         padding: 1rem;
                         margin: 0.5rem;
                     }
-                    
                 }
             }
             input:checked ~ .header--menu--options {
                 display: block;
             }
         }
-    }        
-
-    .header--title {
+    } 
+    .header--title-container{ 
         display: flex;
-        flex-direction: column;
-        width: 75%;
-        margin: 0rem 2rem;
-        h1 {
-            font-family: $font-primary;
-            font-weight: bold;
-            line-height: 3rem;
-            font-size: 3rem;
-            color: $color-dark;
-        }
-        p {
-            font-family: $font-primary;
-            font-size: 16px; 
-            line-height: 28px;
-            color: $color-gray;
-            padding: 1.5rem 0;
-            font-weight: 400;
-        }
-        a {
-            background: $color-blue;
-            padding: 1.5rem 0rem;
-            border: 1px solid $color-blue;
-            border-radius: 8px 8px;
-            text-align: center;
-            color: $color-white;
-            font-size: 14px;
-            font-weight: 400;
-            text-decoration: none;
-            width: 50%;
+        flex-direction: column; 
+        justify-content: space-between;   
+        .header--title {
+            display: flex;
+            flex-direction: column;
+            width: 75%;
+            margin: 0rem 2rem;
+            justify-content: flex-start;
+            align-items: flex-start;
             z-index: 200;
-        }
-        .header--title-img {
-            position: absolute;
-            top: 0rem;
-            right: 0rem;
-        }
-        .header--title-img2 {
-            display: none;
+            h1 {
+                font-family: $font-primary;
+                font-weight: bold;
+                line-height: 3rem;
+                font-size: 3rem;
+                color: $color-dark;
+                margin-top: 1rem;
+            }
+            p {
+                font-family: $font-primary;
+                font-size: 16px; 
+                line-height: 28px;
+                color: $color-gray;
+                padding: 1.5rem 0;
+                font-weight: 400;
+            }
+            span {
+                z-index: 200;
+                a {
+                background: $color-blue;
+                padding: 1rem 1rem;
+                border: 1px solid $color-blue;
+                border-radius: 8px 8px;
+                text-align: center;
+                color: $color-white;
+                font-size: 14px;
+                font-weight: 100%;
+                text-decoration: none;
+                width: 60%;
+                z-index: 300;
+                margin-top: 1rem;
+                } 
+            } 
+            
+        } 
+        .header--title--img {               
+            .header--title-img {
+                width: 100%;
+                margin-top: -3rem;
+            }
         }
     }
 }
@@ -118,15 +136,15 @@ header {
 .header--swipe-down {
     display: none;
 }
-#tablet--work {
+.tablet--work-logo{
     display: none;
 }
-#tablet--cta {
+.footer--logo-icone {
     display: none;
-
 }
 
-@media screen and (min-width: 1024px){
+@media screen and (min-width: 1016px){
+
     .header {
         margin-top: -2rem;
         .header--line {
@@ -135,6 +153,7 @@ header {
         .header--container {
             display: none;  
         }
+        
         .header--container--tablet {
             display: flex;
             justify-content: space-around;
@@ -177,38 +196,42 @@ header {
             }
         }
     }
-    .header--title {
-        font-weight: bold;  
-        margin-bottom: 2rem;  
-        padding: 3rem 28rem 3rem 2rem; 
-        h1 {
-            font-size: 12rem;
-            line-height: 3rem;
-        }
-        .header--swipe-down {
-            display: flex;
-            justify-items: flex-start;
-            align-items: center;
-            background: $color-white;
-            border: none;
-            :first-child {
-                margin-right: 0.5rem;                
+    .header--title-container{ 
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: flex-start;
+        .header--title {
+            font-weight: bold;  
+            margin-bottom: 2rem;             
+            align-items: space-around;
+            padding: 3rem 15rem 3rem 2rem; 
+            h1 {
+                font-size: 12rem;
+                line-height: 3rem;
+                width: 50%;
             }
-        }
-        .header--title-images {
-            position: relative;
-            .header--title-img {
-                display: none;
+            p {
+                width: 55%;
+                margin: 2rem 0;
             }
-            .header--title-img2 {
-                display: block;
-                width: 1100px;
-                position: absolute;
-                top: -42rem;
-                left: -9rem;
-            }
+            .header--swipe-down {
+                display: flex;
+                justify-items: flex-start;
+                align-items: center;
+                background: $color-white;
+                border: none;
+                :first-child {
+                    margin-right: 0.5rem;                
+                }
+            }            
+            
+        } 
+        .header--title--img {
+            width: 100%;
+            margin-top: -45rem;
         }
-    } 
+    }
 }
 
 

@@ -32,85 +32,120 @@
         line-height: 28px;
     }
 }
-.work--card {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    .work--card--product {
-        :first-child[card-one]{
-        margin: 2rem;
-        padding-bottom: 1rem;
-        background: $color-dark-orange;
-        border-radius: 18px 18px;
-        }
-        :first-child[card-two]{
-            margin: 2rem;
-            background: $color-violet;
-            border-radius: 18px;
-        }
-        :first-child[card-three]{
-            margin: 2rem;
-            background: $color-little-orange;
-            border-radius: 18px;
-        }
-        :first-child[card-four]{
-            margin: 2rem;
-            background: $color-little-blue;
-            border-radius: 18px;
-        }
-        :first-child[card-five]{
-            margin: 2rem;
-            background: $color-dark-orange;
-            border-radius: 18px;
-        }
-        a {
-            text-decoration: none;
-            color: $color-white;
-            background: $color-blue;
-            padding: 0.5rem 1rem;
-            border-radius: 25px;
-            position: relative; 
-            bottom: 6rem;
-            left: 4rem;                       
-        }
-    }
-    h2 {
-        font-size: 1.5rem;
-        width: 80%;
-        margin: 0 0 1rem 2rem;
-        font-weight: bold;
-        line-height: 3rem;
-        color: $color-dark;
-    }
-    p {
-        margin: 0 2rem;
-        color: $color-gray;
-        font-size: 16px;
-        font-weight: 400;
-        line-height: 28px;
-    }
-    .work--stroke {
-        width: $sizes;
-        margin: 2rem;
-    }
-}
-.work--contact {
-    a {
-        background: $color-blue;
-        padding: 1.5rem 5rem;
-        border-radius: 8px;
-        text-align: center;
-        text-decoration: none;
-        font-size: 16px;
-        font-weight: 600;
-        color: $color-white;
+#tablet--work-page1 {
+    .work--card {
         display: flex;
-        margin: 2rem;
+        flex-direction: column;
         justify-content: center;
+        .work--card--product {
+            :first-child[card-one]{
+            margin: 2rem;
+            padding-bottom: 1rem;
+            background: $color-dark-orange;
+            border-radius: 18px 18px;
+            }
+            :first-child[card-two]{
+                margin: 2rem;
+                background: $color-violet;
+                border-radius: 18px;
+            }
+            :first-child[card-three]{
+                margin: 2rem;
+                background: $color-little-orange;
+                border-radius: 18px;
+            }
+            :first-child[card-four]{
+                margin: 2rem;
+                background: $color-little-blue;
+                border-radius: 18px;
+            }
+            :first-child[card-five]{
+                margin: 2rem;
+                background: $color-dark-orange;
+                border-radius: 18px;
+            }
+            a {
+                text-decoration: none;
+                color: $color-white;
+                background: $color-blue;
+                padding: 0.5rem 1rem;
+                border-radius: 25px;
+                position: relative; 
+                bottom: 6rem;
+                left: 4rem;                       
+            }
+        }
+        h2 {
+            font-size: 1.5rem;
+            width: 80%;
+            margin: 0 0 1rem 2rem;
+            font-weight: bold;
+            line-height: 3rem;
+            color: $color-dark;
+        }
+        p {
+            margin: 0 2rem;
+            color: $color-gray;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 28px;
+        }
+        .work--stroke {
+            width: $sizes;
+            margin: 2rem;
+        }
+    }
+    .work--contact {
+        a {
+            background: $color-blue;
+            padding: 1.5rem 5rem;
+            border-radius: 8px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 600;
+            color: $color-white;
+            display: flex;
+            margin: 2rem;
+            justify-content: center;
+        }
     }
 }
-
+#tablet--work-card {
+    display: none;
+}
+.work--card {
+    display: none;
+}
+.tablet--work-contact {
+    display: none;
+}
+.work--tablet--card{
+    display: none;
+}
+.tablet--card {
+    display: none;
+}
+.tablet--stroke {
+    display: none;
+}
+.tablet--card-division {
+    display: none;
+}
+.tablet--card-division2 {
+    display: none;
+}
 @media screen and (min-width: 1024px){
+
+    #tablet--work-page1 {
+        display: none;
+    }
+    .work--card {
+        display: block;
+    }
+    .tablet--work-contact {
+        display: block;
+    }
     #tablet--work {
         display: block;
         .main--service {
@@ -139,6 +174,7 @@
                 }
             }
             .tablet--work-contact {
+                display: block;
                 width: 20%;
                 margin-top: 10rem;
                 margin-left: -10rem;
@@ -154,10 +190,12 @@
             }
         }
         .work--tablet-card {
+            display: block;
             display: flex;
             align-items: center;
             margin-left: 3rem;
             .tablet--card {
+                display: block;
                 z-index: 1;
                 a {
                     text-decoration: none;
@@ -168,13 +206,13 @@
                     font-weight: 400;
                     font-size: 16px;
                     margin-left: 2rem;
-                    
                 }
                 h2 {
                     margin-top: 3rem;
                     font-size: 2.3rem;
                     line-height: 3rem;
                     width: 60%;
+                    font-weight: bold;
                     margin-bottom: 2rem;
                 }
                 p {
@@ -193,6 +231,7 @@
                 }
             }
             .tablet--stroke {
+                display: block;
                 position: relative;
                 a {
                    img {
@@ -209,12 +248,12 @@
                     right: 0;
                 }
             }
-         
         }
         .tablet--work-card {
             display: flex;
             margin-top: 4.5rem;
             .tablet--card-division {
+                display: block;
                 width: 50%;
                 .tablet--card-container {
                     .bento-3D {
@@ -279,6 +318,7 @@
                 }
             }
             .tablet--card-division2 {
+                display: block;
                 width: 50%;
                 .bento-vol2 {
                     font-size: 2rem;
@@ -353,7 +393,6 @@
                     margin-left: 5rem;
                     margin-top: 2rem;
                 }
-               
             }
         }  
     }

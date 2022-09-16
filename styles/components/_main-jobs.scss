@@ -1,78 +1,215 @@
 @import '../abstract/variaveis';
 
-.main--jobs {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;    
-    padding: 2rem 0 1rem 1rem;
-    margin: 2rem 2rem;
-    background: $color-white;
-    border: solid 1px $color-white;
-    border-radius: 24px;
-    box-shadow: 1px 1px 10px rgb(245, 243, 241);
-    z-index: 200;
-    position: relative;
-    .main--jobs--info {
-        flex-direction: column;
-        justify-content: center;
-        align-items: flex-start;
-        text-align: left;        
-        h3 {
-            font-size: 18px;
-            font-weight: 700;
-            color: $color-dark;
+    .main--jobs {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;    
+        padding: 2rem 0 1rem 1rem;
+        margin: 2rem 2rem;
+        background: $color-white;
+        border: solid 1px $color-white;
+        border-radius: 24px;
+        box-shadow: 1px 1px 10px rgb(245, 243, 241);
+        z-index: 200;
+        position: relative;
+        .main--jobs--info {
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            text-align: left;        
+            h3 {
+                font-size: 18px;
+                font-weight: 700;
+                color: $color-dark;
+            }
+            .jobs ~ p {
+                padding: 1rem 0;
+                color: $color-gray;
+                font-size: 14px;
+            }
+            :nth-child(4){
+                display: none;
+            }
+            .jobs {
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                span {
+                    margin: 0 0.3rem 0 0.3rem;
+                    padding: 0.5rem;
+                    background: $color-blue;
+                    color: $color-white;
+                    border-radius: 50%;
+                }
+            }
         }
-        .jobs ~ p {
-            padding: 1rem 0;
-            color: $color-gray;
-            font-size: 14px;
-        }
-        :nth-child(4){
-            display: none;
-        }
-        .jobs {
-            display: flex;
-            justify-content: flex-start;
-            align-items: center;
-            span {
-                margin: 0 0.3rem 0 0.3rem;
-                padding: 0.5rem;
+        .main--jobs--tablet {
+            img { 
+                display: none;
                 background: $color-blue;
-                color: $color-white;
-                border-radius: 50%;
+                border-radius: 24px;
+                width: 115px;                    
             }
         }
     }
-    .main--jobs--tablet {
-        img { 
+    .main--jobs:hover {
+        background: $color-dark;
+        justify-content: space-between;
+        padding: 1rem 1rem 1rem 2rem;
+        margin: 1rem 0 0rem 1.5rem;
+        width: 90%;
+        color: $color-white;
+        :first-child {
+            color: $color-white;
+        }
+        .jobs ~ p {
+            color: $color-gray-light;
+        }
+        :nth-child(3){
             display: none;
-            background: $color-blue;
-            border-radius: 24px;
-            width: 115px;                    
+        }
+        :nth-child(4) {
+            display: block;
+        }    
+        .hover {
+            display: block;
         }
     }
+
+.jobs--down-button {
+    display: none;
 }
-.main--jobs:hover {
-    background: $color-dark;
-    justify-content: space-between;
-    padding: 1rem 1rem 1rem 2rem;
-    margin: 1rem 0 0rem 1.5rem;
-    width: 90%;
-    color: $color-white;
-    :first-child {
-        color: $color-white;
+.main--service {
+    .main--arrow2 {
+        margin: 1rem 0;
     }
-    .jobs ~ p {
-        color: $color-gray-light;
-    }
-    :nth-child(3){
+}
+
+@media screen and (min-width: 1024px){
+    .main--jobs {
         display: none;
     }
-    :nth-child(4) {
+    .jobs--down-button {
         display: block;
-    }    
-    .hover {
+    }
+    #tablet--jobs {
         display: block;
+        display: flex;
+        margin-top: 3rem;
+        background: $color-gray-gradient;
+        margin-bottom: 4rem;
+        .tablet--jobs-display {
+            width: 50%;
+            .jobs-logo {
+                width: 100%;
+                margin-top: 7rem;
+                margin-left: 4rem; 
+                img {
+                    width: 2rem;
+                }               
+            }
+            .main--service {
+                width: 70%;
+                margin-left: 7rem;
+                margin-top: -4.5rem;
+                .main--who-we-do {
+                    p {
+                        color: $color-blue;
+                    }
+                }
+                h2 {
+                    font-size: 3.5rem;
+                    margin: 2rem 0;
+                }
+                p {
+                    margin-top: 1rem;
+                }
+                .main--arrow2 {
+                    display: none;
+                }
+                a {
+                   margin-top: 4rem;
+                }
+            }
+        }
+        .tablet--jobs-display2 {
+            margin-top: 7rem;
+            .main--jobs-tablet {
+                padding: 1rem 4rem; 
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;    
+                margin: 2rem 2rem;
+                background: $color-white;
+                border: solid 1px $color-white;
+                border-radius: 24px;
+                box-shadow: 1px 1px 10px rgb(245, 243, 241);
+                z-index: 200;
+                position: relative;
+                .main--jobs--info {
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: flex-start;
+                    text-align: left;        
+                    h3 {
+                        font-size: 18px;
+                        font-weight: 700;
+                        color: $color-dark;
+                    }
+                    .jobs ~ p {
+                        padding: 1rem 0;
+                        color: $color-gray;
+                        font-size: 14px;
+                    }
+                    :nth-child(4){
+                        display: none;
+                    }
+                    .jobs {
+                        display: flex;
+                        justify-content: flex-start;
+                        align-items: center;
+                        span {
+                            margin: 0 0.3rem 0 0.3rem;
+                            padding: 0.5rem;
+                            background: $color-blue;
+                            color: $color-white;
+                            border-radius: 50%;
+                        }
+                    }
+                }
+                .main--jobs--tablet {
+                    img { 
+                        display: none;
+                        background: $color-blue;
+                        border-radius: 24px;
+                        width: 115px;                    
+                    }
+                }
+            }
+            .main--jobs-tablet:hover {
+                background: $color-dark;
+                justify-content: space-between;
+                padding: 1rem 1rem 1rem 2rem;
+                margin: 1rem 0 0rem 1.5rem;
+                width: 90%;
+                color: $color-white;
+                :first-child {
+                    color: $color-white;
+                }
+                .jobs ~ p {
+                    color: $color-gray-light;
+                }
+                :nth-child(3){
+                    display: none;
+                }
+                :nth-child(4) {
+                    display: block;
+                }    
+                .hover {
+                    display: block;
+                }
+            }
+        } 
     }
 }
 

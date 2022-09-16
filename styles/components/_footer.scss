@@ -69,14 +69,14 @@
         }
         a {
             background: $color-white;
-            padding: 1.5rem 5rem;
+            align-self: center;
+            padding: 1.5rem 4rem;
             border-radius: 8px;
             text-align: center;
             text-decoration: none;
-            font-size: 16px;
+            font-size: 12px;
             font-weight: 600;
             z-index: 10;
-
         }
     }
     .footer--logo {
@@ -101,12 +101,15 @@
             border: solid 1px $color-gray-light;
             padding: 1.5rem 1rem;
             border-radius: 8px;
+            z-index: 100;
             select {
                 border: none;
+                z-index: 200;
+                option {
+                    width: 50px;
+                }
             }
         }
-    
-         
     }
     .footer--logo-socials {
         display: flex;
@@ -127,4 +130,42 @@
         right: 5rem;
     }
     
+}
+.footer--logo-icone {
+    display: none;
+}
+@media screen and (min-width: 1024px){
+    .footer--img--bubble {
+        display: none;
+    }
+
+    .footer {
+
+        .footer--img {
+            .footer--logo-icone {
+                display: block;
+                margin-bottom: 2rem;
+                img {
+                    width: 2.5rem;
+                }
+            } 
+            .footer--hello {
+                p {
+                    font-size: 4rem;
+                }
+            } 
+            h5 {
+                font-weight: bold;
+                width: 40%;
+            }
+        }
+        .footer--contact {
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+            a {
+                display: none;
+            }
+        }
+    }
 }

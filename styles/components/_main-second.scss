@@ -9,6 +9,7 @@
         background: $color-dark;
         color: $color-white;
         justify-content: space-around;
+        margin-top: 25rem;
         padding: 2rem;    
         .main--who-we-are {
             display: flex;
@@ -27,36 +28,32 @@
             font-weight: 700;
             line-height: 3rem;
         }
-        img {
-            padding: 0 0.5rem 0rem 0;
-            width: 100%;
-            margin-bottom: 2rem;        
+        .main--arrow2 {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
         }
     }
     .main--shape {
-        position: relative;
-        :first-child{
-            width: 100vw;
-        }
-        :nth-child(2){
-            position: absolute;
-            top: -1.5rem;
-            right: 0rem;        
-        }
-        :last-child {
-            position: absolute;
-            top: 1rem;
-            right: 0rem;
-            
-        }
+        .main--shape-0 {
+            display: flex;
+            flex-direction: column;
+            .main--shape-1 {
+                position: relative;
+                top: -2rem;
+                right: 0rem;
+                max-height: 400px;
+            }
+        }  
     }
     .main--content {
         background: $color-dark;
-        margin-top: -2rem;
         padding: 5rem 2rem;
         flex-direction: column;
+        margin-top: -30rem;
         h6 {
-            margin-top: -1rem;
+            margin-top: 22rem;
             font-size: calc($sizes / 2);
             font-weight: 700;
             color: $color-white;
@@ -100,4 +97,101 @@
         }
     }
 }
+
+@media screen and (min-width: 1024px){ 
+    
+    .main--arrow-img {
+        display: none;
+    }  
+    .main--shape {
+        display: none;
+    } 
+    .main--arrow2-year {
+        display: none;
+    }
+    .main {
+        margin-top: 0;
+        .main--year-container{
+            display: flex;
+            .main--year {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                width: 20%;
+                .main--year-symbol {
+                    margin-top: 5rem;
+                    width: 3rem;
+                    margin-bottom: 11rem;
+                }
+                p {
+                    margin: 2.3rem;
+                }
+            }
+            .main--who-we-are {
+                display: flex; 
+                margin-top: 3.5rem;
+                margin-bottom: 2rem;               
+            }
+            .main--who-h2{
+                flex-direction: column;
+                margin-left: 2rem;
+                width: 90%;
+                z-index: 20;
+                h2 {
+                    font-size: 3rem;
+                }
+                .a2 {
+                    display: flex;
+                    z-index: 1;
+                    position: relative;
+                    bottom: -2rem;
+                    left: 1rem;
+                    width: 115%;
+                }
+                
+            }
+            .main--arrow2 {
+                display: flex;
+                justify-content: space-around;
+                margin-top: 9rem;
+                margin-right: 4rem;
+                z-index: 20;
+                img {
+                    width: 60px;
+                }
+            }
+            .main--shape-tablet {
+                display: flex;
+                position: relative;
+                .a1 {
+                    position: absolute;
+                    top: -4rem;
+                    right: -2.5rem;
+                    width: 80vw;
+                    z-index: 0;
+                }    
+                
+            }
+        }
+    } 
+    .main--content {
+        display: flex;
+        flex-direction: row;
+        margin-top: -2rem;
+        .line {
+            width: 20%;
+            justify-content: center;
+            justify-self: center;
+        }
+        .main--content-container {
+            width: 37%;
+        }
+        .main--content--number {
+            margin-left: 4rem;
+            width: 30%;
+        }
+    }
+}
+
 

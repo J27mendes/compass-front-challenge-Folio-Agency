@@ -10,17 +10,45 @@
     <title>mobile c.t.a</title>
 <body>
     <header>
-        <header>
-            <div class="header">
-                <img class="header--logo" src="./images/header/light-mode.svg"> 
-                <div class="header--container">
-                    <input type="checkbox" id="menu" class="menu-checked">
-                    <label for="menu">
-                    <a href="./menu.html"><span class="header--container--img"><img src="./images/header/burger.svg"></span></a> 
-                    </label>
+        <div class="header">
+            <img class="header--logo" src="./images/header/light-mode.svg"> 
+            <div class="header--container--tablet">
+                <a class="tablet--menu" href="./main-who-we-are.html">About</a>
+                <a class="tablet--menu" href="./main-work.html">work</a>
+                <a class="tablet--menu" href="./main-service.html">Services</a>
+                <div class="tablet--menu--extra">
+                    <a class="tablet--menu" href="./main-jobs.html">Jobs</a>
+                    <p>2</p>
                 </div>
+                <a href="https://projetofolioagency.com">Contact Us</a>
             </div>
-        </header>
+            <div class="header--container">
+                <input type="checkbox" id="menu" class="menu-checked">
+                <label for="menu">
+                <a href="./menu.html"><span class="header--container--img"><img src="./images/header/burger.svg"></span></a> 
+                </label>
+            </div>
+        </div>
+    </header>
+    <section id="tablet--cta">
+        <div class="tablet--cta">
+            <div class="cta">                
+                <div class="cta--message"> 
+                    <p>05.</p>
+                    <p>Call to action</p>
+                </div>
+                <h2>We Are Looking for Talented Designers</h2>
+                <a href="./main-jobs.html">Apply Now</a> 
+            </div> 
+            <div class="tablet--cta-mask">
+                <img src="./images/medias/Mask (1).svg">
+            </div>
+            <div class="tablet--cta-mask-blue">
+                <img src="./images/medias/phone-background.svg">
+                <img class="main--year-symbol" src="./images/medias/logo symbol.svg" symbol>
+            </div>
+        </div>   
+    </section>
         <section class="mobile--cta">
             <div class="cta">
                 <div class="cta--message"> 
@@ -33,6 +61,48 @@
             </div> 
             <img class="mobile--cta--bg" src="./images/cta/bg.svg">
             <img class="mobile--cta--mask" src="./images/cta/Mask.svg">
-        </section>           
+        </section>
+        <footer class="footer">
+            <section class="footer--img"> 
+                <img class="footer--img--line" src="./images/footer/line 2.svg">
+                <img class="footer--img--bubble" src="./images/footer/SpeachBubble V2.svg">        
+                <div class="footer--logo-icone">
+                    <img src="./images/medias/logo-symbol-violet.svg">     
+                </div>
+                <div class="footer--hello">
+                    <img src="./images/footer/mao.svg">
+                    <p>Say hello</p>
+                </div>            
+                <h5>A design team building a curated marketplace for UI designers.</h5>
+            </section>
+            <section class="footer--contact">
+                <div class="footer--contact-division">
+                    <h2>Let's talk about your next project</h2>
+                    <a href="https://projetofolioagency.com">Contact US</a>  
+                </div>         
+            </section>
+            <section class="footer--logo">  
+                <div class="footer--logo-agency">   
+                    <img class="footer--logo-img" src="./images/header/light-mode.svg">
+                    <p class="footer--logo-agency-p">Agency is a full-service agency, busy designing and building.</p>
+                    <div class="footer--label">
+                        <label for="home">Home</label>
+                        <select id="home" class="footer-options">
+                            <option value="work">Work</option>
+                            <option value="About">About</option>
+                            <option value="Services">Services</option>
+                            <option value="Jobs">Jobs</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="footer--logo-socials">
+                    <img src="./images/footer/facebook.svg">
+                    <img src="./images/footer/play.svg">
+                    <img src="./images/footer/instagran.svg">
+                </div>
+                <p class="footer--bottom">2020, UI8 LLC.</p>
+                <img class="footer--line--bottom--img" src="./images/footer/line-bottom.svg"> 
+            </section>        
+        </footer>               
 </body>
-</head>
+</html>

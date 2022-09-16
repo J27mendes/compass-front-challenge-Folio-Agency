@@ -26,10 +26,11 @@
             line-height: 3rem;
             color: $color-dark;
         }
-        img {
-            padding: 0 0.5rem 0rem 0;
-            width: calc($sizes * 2.5);
-            margin-bottom: 2rem;        
+        .main--arrow2 {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
         }
     }
 }
@@ -134,7 +135,6 @@
     :last-child {
         width: 60%;
     }
-    
 }
 .main--service--phone {
     display: flex;
@@ -154,20 +154,20 @@
         z-index: -1;
     }   
 }
-#page--tablet-main-service {
+.main--year-symbol {
     display: none;
 }
 
 @media screen and (min-width: 1024px){ 
     #page--tablet-main-service {
-        background: linear-gradient(rgba(237, 229, 240, 0.5043) 0%, rgba(255, 255, 255, 0.0001) 100%);
-        display: block;
+        background: $color-gray-gradient;
         .tablet--service {
             display: flex;
             margin-top: 3rem;
             justify-content: flex-start;
             align-items: flex-start;
             .main--year-symbol {
+                display: block;
                 width: 20%;
                 img {
                     margin-top: 2rem;
